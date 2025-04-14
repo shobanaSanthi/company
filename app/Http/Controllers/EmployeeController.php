@@ -14,7 +14,7 @@ use App\employee_skill;
 
 class EmployeeController extends Controller
 {
-    //
+    
     public function index(Request $request){
         $user=User::where('id',$request->session()->get('User_id'))->first();
         return view('employee')->with(['user' => $user]);
